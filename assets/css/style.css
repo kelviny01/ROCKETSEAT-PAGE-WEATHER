@@ -1,0 +1,283 @@
+/* =============== RESET CSS =============== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato',sans-serif;
+}
+
+/* =============== CSS VARIABLES =============== */
+
+:root {
+    --fs-12: 1.2rem;
+    --fs-14: 1.4rem;
+    --fs-18: 1.8rem;
+    --fs-20: 2rem;
+    --fs-24: 2.4rem;
+    --fs-40: 4rem;
+    --fs-88: 8.8rem;
+
+    --text-color-default: #fff;
+    --text-color: #C2BFF4;
+    --text-color-sup: #DAD8F7;
+    --text-color-before: #E7E6FB;
+    --text-color-greenPast: #87EBCD;
+
+   --bg-cards-color: #6D67D0;
+   --bg-opacity: rgba(102, 96, 200, 0.6);
+}
+
+/* =============== GENERIC STYLES =============== */
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+}
+
+.week__statistics p {
+    color: var(--text-color-sup);
+    font-size: var(--fs-18);
+    font-weight: 700;
+}
+
+.week__wind p::before {
+    content: attr(data-wind);
+    display: block;
+    color: var(--text-color-before);
+    font-weight: 400;
+    font-size: var(--fs-12);
+}
+
+.week__humidity p::before {
+    content: attr(data-humidity);
+    display: block;
+    color: var(--text-color-before);
+    font-weight: 400;
+    font-size: var(--fs-12);
+}
+
+.week__rain p::before {
+    content: attr(data-rain);
+    display: block;
+    color: var(--text-color-before);
+    font-weight: 400;
+    font-size: var(--fs-12);
+}
+
+/* =============== UTILITY CLASSES =============== */
+
+.articlesBgColor {
+    background-color: var(--bg-cards-color);
+    border-radius: 1rem;
+}
+
+.week__weather .center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.colorP p {
+    color: var(--text-color-sup);
+    font-size: var(--fs-14);
+    font-weight: 700;
+}
+
+/* =============== MAIN =============== */
+
+#main {
+    background: url(../img/Background.jpg) no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+/* =============== SECTION =============== */
+
+.week {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.week__container > div {
+    display: flex;
+    gap: 2.4rem;
+}
+
+article.week__temperatureNow {
+   width: 48rem;
+   height: 48rem; 
+   background: url(../img/Temperature\ Now.jpg) no-repeat;
+   background-color: var(--bg-cards-color);
+   margin-right: 3.2rem;
+   position: relative;
+}
+
+.week__imgCloud img{
+    position: absolute;
+    top: -5.6rem;
+    left: -5.6rem;
+}
+
+.week__location {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: .8rem;
+    padding: 3.5rem 3.2rem;
+}
+
+.week__location p {
+    color: var(--text-color);
+    font-size: var(--fs-14);
+    font-weight: 700;
+}
+
+.week_temperature {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.week__degrees {
+    font-size: var(--fs-88);
+    font-weight: 700;
+    color: var(--text-color-default);
+    line-height: 105.6px;
+    text-align: center;
+}
+
+.week__degrees > sup {
+    color: var(--text-color-sup);
+    font-size: var(--fs-24);
+}
+
+.temp-1,
+.temp-2 {
+    font-size: var(--fs-20);
+    font-weight: 700;
+    line-height: 2.4rem;
+    text-align: center;
+}
+
+.temps .temp-1 {
+    color: var(--text-color-default);
+}
+
+.temps .temp-2 {
+    color: var(--text-color);
+}
+
+.week__statistics {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    height: 50%;
+}
+
+.week__wind,
+.week__humidity,
+.week__rain {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    background-color: var(--bg-opacity);
+    padding: 1.2rem 1.6rem;
+    border-radius: .6rem;
+    width: 14.6rem;
+}
+
+article.week__airQuality {
+    width: 29rem;
+    height: 24.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+
+.week__air {
+    display: flex;
+    gap: .8rem;
+}
+
+.week__air p {
+    color: var(--text-color-sup);
+    font-weight: 700;
+    font-size: 1.6rem;
+}
+
+.week__quality .qualityColor {
+    color: var(--text-color-greenPast);
+    font-size: var(--fs-18);
+    font-weight: 700;
+}
+
+.week__quality .dregressColor {
+    color: var(--text-color-before);
+    font-size: var(--fs-40);
+    font-weight: 700;
+}
+
+.week__infos {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: .2rem .5rem;
+    align-items: center;
+}
+
+.week__infos .color-1 {
+    color: var(--text-color-greenPast);
+    font-size: var(--fs-14);
+    font-weight: 700;
+}
+
+.week__infos .color-2 {
+    color: var(--text-color-before);
+    font-size: var(--fs-14);
+    font-weight: 700;
+}
+
+article.week_sunTime {
+    width: 27.7rem;
+    height: 24.4rem;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.week__oClock {
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+}
+
+.week__oClock p {
+    color: var(--text-color-sup);
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 19.2px;
+}
+
+article.week__weather {
+    padding: 4rem;
+    margin-top: 2.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around; 
+    gap: 0 1.6rem;
+}
+
+.week__weather > div {
+    display: flex;
+    gap: 1.6rem;
+}
